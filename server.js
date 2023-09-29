@@ -15,6 +15,10 @@ const apiKey = process.env.apiKey; // Replace with your ChatPDF API key
 app.use(express.json());
 let uploadedPdfSourceId = null; // Initialize the variable
 
+app.get('/', (req, res) => {
+    res.send("Use /add-pdf to add pdf then /chat-with-pdf to chat")
+})
+ 
 // Route to handle PDF file upload and addition to ChatPDF
 app.post('/add-pdf', upload.single('pdf'), (req, res) => {
     // Check if a file was uploaded
