@@ -4,7 +4,7 @@ const multer = require('multer');
 const fs = require('fs');
 require('dotenv').config()
 const app = express();
-const port = process.env.PORT || 3030;;
+const port = process.env.PORT || 3000;;
 
 // Set up multer for handling file uploads
 const upload = multer({ dest: 'uploads/' });
